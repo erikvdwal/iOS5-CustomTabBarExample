@@ -12,10 +12,54 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSArray *titles = @[@"Playlist", @"Artist", @"Track", @"Album", @"More"];
+    
+    NSMutableArray *viewControllers = [NSMutableArray arrayWithCapacity:5];
+    for (uint i = 0; i < 5; i++) {
+        UIImage *tabImage = [UIImage imageNamed:[NSString stringWithFormat:@"icon%i", (i+1)]]; // icon1, icon2, etc..
+        
+        UIViewController *viewController = [[UIViewController alloc] init];
+        [viewController.view setBackgroundColor:[UIColor colorWithRed:0.918 green:0.917 blue:0.940 alpha:1.000]];
+
+        // Change the image and title for the view controller's tabbar item
+        [viewController.tabBarItem setTitle:[titles objectAtIndex:i]]; // corresponding title
+        [viewController.tabBarItem setFinishedSelectedImage:tabImage withFinishedUnselectedImage:tabImage];
+        
+        // Add the view controller to the array
+        [viewControllers addObject:viewController];
+    }
+    
+    // Change the tabbar's background and selection image through the appearance proxy
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar_bg.png"]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_selection.png"]];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:viewControllers];
+    [tabBarController setSelectedIndex:0];
+        
+    // Text appearance values for the tab in normal state
+    NSDictionary *normalState = @{
+        UITextAttributeTextColor : [UIColor colorWithWhite:0.213 alpha:1.000],
+        UITextAttributeTextShadowColor: [UIColor whiteColor],
+        UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
+    };
+    
+    // Text appearance values for the tab in highlighted state
+    NSDictionary *selectedState = @{
+        UITextAttributeTextColor : [UIColor blackColor],
+        UITextAttributeTextShadowColor: [UIColor whiteColor],
+        UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.0, 1.0)]
+    };
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:normalState forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:selectedState forState:UIControlStateHighlighted];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window makeKeyAndVisible];
+    [self.window setRootViewController:tabBarController]; // We'll just present the tabbar controller
+    
     return YES;
 }
 

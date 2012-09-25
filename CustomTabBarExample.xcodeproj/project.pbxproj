@@ -21,6 +21,13 @@
 		DA870118161211AE00F1CDCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8700F9161211AD00F1CDCA /* Foundation.framework */; };
 		DA870120161211AE00F1CDCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA87011E161211AE00F1CDCA /* InfoPlist.strings */; };
 		DA870123161211AE00F1CDCA /* CustomTabBarExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA870122161211AE00F1CDCA /* CustomTabBarExampleTests.m */; };
+		DA8701311612153F00F1CDCA /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA87012C1612153F00F1CDCA /* icon1.png */; };
+		DA8701321612153F00F1CDCA /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA87012D1612153F00F1CDCA /* icon2.png */; };
+		DA8701331612153F00F1CDCA /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA87012E1612153F00F1CDCA /* icon3.png */; };
+		DA8701341612153F00F1CDCA /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = DA87012F1612153F00F1CDCA /* icon4.png */; };
+		DA8701351612153F00F1CDCA /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = DA8701301612153F00F1CDCA /* icon5.png */; };
+		DA87013B161216F600F1CDCA /* tabbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DA87013A161216F600F1CDCA /* tabbar_bg.png */; };
+		DA87013F1612178500F1CDCA /* tabbar_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = DA87013E1612178500F1CDCA /* tabbar_selection.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		DA87011F161211AE00F1CDCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA870121161211AE00F1CDCA /* CustomTabBarExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarExampleTests.h; sourceTree = "<group>"; };
 		DA870122161211AE00F1CDCA /* CustomTabBarExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarExampleTests.m; sourceTree = "<group>"; };
+		DA87012C1612153F00F1CDCA /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		DA87012D1612153F00F1CDCA /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		DA87012E1612153F00F1CDCA /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		DA87012F1612153F00F1CDCA /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
+		DA8701301612153F00F1CDCA /* icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon5.png; sourceTree = "<group>"; };
+		DA87013A161216F600F1CDCA /* tabbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_bg.png; sourceTree = "<group>"; };
+		DA87013E1612178500F1CDCA /* tabbar_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selection.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA7F6077161484110007B4B7 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DA8701371612154A00F1CDCA /* Icons */,
+				DA7F60791614841D0007B4B7 /* Other */,
+			);
+			name = Tabbar;
+			sourceTree = "<group>";
+		};
+		DA7F60791614841D0007B4B7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DA87013A161216F600F1CDCA /* tabbar_bg.png */,
+				DA87013E1612178500F1CDCA /* tabbar_selection.png */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		DA8700E8161211AD00F1CDCA = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +144,7 @@
 		DA8700FD161211AD00F1CDCA /* CustomTabBarExample */ = {
 			isa = PBXGroup;
 			children = (
+				DA8701361612154500F1CDCA /* Images */,
 				DA870106161211AE00F1CDCA /* AppDelegate.h */,
 				DA870107161211AE00F1CDCA /* AppDelegate.m */,
 				DA8700FE161211AD00F1CDCA /* Supporting Files */,
@@ -150,6 +183,26 @@
 				DA87011E161211AE00F1CDCA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA8701361612154500F1CDCA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DA7F6077161484110007B4B7 /* Tabbar */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DA8701371612154A00F1CDCA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				DA87012C1612153F00F1CDCA /* icon1.png */,
+				DA87012D1612153F00F1CDCA /* icon2.png */,
+				DA87012E1612153F00F1CDCA /* icon3.png */,
+				DA87012F1612153F00F1CDCA /* icon4.png */,
+				DA8701301612153F00F1CDCA /* icon5.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +280,13 @@
 				DA87010A161211AE00F1CDCA /* Default.png in Resources */,
 				DA87010C161211AE00F1CDCA /* Default@2x.png in Resources */,
 				DA87010E161211AE00F1CDCA /* Default-568h@2x.png in Resources */,
+				DA8701311612153F00F1CDCA /* icon1.png in Resources */,
+				DA8701321612153F00F1CDCA /* icon2.png in Resources */,
+				DA8701331612153F00F1CDCA /* icon3.png in Resources */,
+				DA8701341612153F00F1CDCA /* icon4.png in Resources */,
+				DA8701351612153F00F1CDCA /* icon5.png in Resources */,
+				DA87013B161216F600F1CDCA /* tabbar_bg.png in Resources */,
+				DA87013F1612178500F1CDCA /* tabbar_selection.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +488,7 @@
 				DA870128161211AE00F1CDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA870129161211AE00F1CDCA /* Build configuration list for PBXNativeTarget "CustomTabBarExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +497,7 @@
 				DA87012B161211AE00F1CDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
